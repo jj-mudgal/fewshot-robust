@@ -45,7 +45,7 @@ fewshot-robust/..
 results/..  
 - plots.py  
 
-scripts/  
+scripts/..  
 - inspect_dataset.py  
 
 outputs/..  
@@ -59,10 +59,13 @@ outputs/..
 
 ### 1. Clone the Repository and Create an Environment
 
-git clone https://github.com/<your-username>/fewshot-robust.git
-cd fewshot-robust
-python3 -m venv venv
-source venv/bin/activate
+`git clone https://github.com/jj-mudgal/fewshot-robust.git`
+
+`cd fewshot-robust`
+
+`python3 -m venv venv`
+
+`source venv/bin/activate`
 
 ### 2. Install Dependencies
 
