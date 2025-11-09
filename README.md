@@ -59,17 +59,17 @@ outputs/..
 
 ### 1. Clone the Repository and Create an Environment
 
-`git clone https://github.com/jj-mudgal/fewshot-robust.git`
+```git clone https://github.com/jj-mudgal/fewshot-robust.git```
 
-`cd fewshot-robust`
+```cd fewshot-robust```
 
-`python3 -m venv venv`
+```python3 -m venv venv```
 
-`source venv/bin/activate`
+```source venv/bin/activate```
 
 ### 2. Install Dependencies
 
-``pip install torch torchvision tqdm matplotlib numpy pillow``
+```pip install torch torchvision tqdm matplotlib numpy pillow```
 
 ### Dataset Setup
 
@@ -96,20 +96,21 @@ Example:
 
 5-way 1-shot (Fast, highlights fragility)
 
-```python train.py --n_way 5 --k_shot 1 --q_queries 15 --episodes 2000 --aq --attack_iters 10
+`python train.py --n_way 5 --k_shot 1 --q_queries 15 --episodes 2000 --aq --attack_iters 10
 5-way 5-shot (Standard few-shot baseline)
-
+`
+`
 python train.py --n_way 5 --k_shot 5 --q_queries 15 --episodes 2000 --aq --attack_iters 10
 10-way 5-shot (Harder configuration)
-
-python train.py --n_way 10 --k_shot 5 --q_queries 15 --episodes 2000 --aq --attack_iters 10
+`
+`python train.py --n_way 10 --k_shot 5 --q_queries 15 --episodes 2000 --aq --attack_iters 10
 Certified Defense Evaluation
-```
+`
 
-```
 Evaluate robustness and trimming-based certified defense:
+``
 python defense_certified.py --n_way 10 --k_shot 5 --episodes 300 --k_trim 3
-```
+``
 ### Example output:
 
 === Certified Defense Evaluation ===
