@@ -69,11 +69,13 @@ outputs/..
 
 ### 2. Install Dependencies
 
-pip install torch torchvision tqdm matplotlib numpy pillow
-Dataset Setup
-The experiments use the Mini-ImageNet dataset, available on Kaggle:
-Mini-ImageNet Dataset (by Arjun Ashok)
+``pip install torch torchvision tqdm matplotlib numpy pillow``
 
+### Dataset Setup
+
+The experiments use the Mini-ImageNet dataset, available on Kaggle:
+[Mini-ImageNet Dataset (by Arjun Ashok)
+](https://www.kaggle.com/datasets/arjunashok33/miniimagenet)
 
 ## Verify dataset integrity:
 
@@ -94,7 +96,7 @@ Example:
 
 5-way 1-shot (Fast, highlights fragility)
 
-python train.py --n_way 5 --k_shot 1 --q_queries 15 --episodes 2000 --aq --attack_iters 10
+```python train.py --n_way 5 --k_shot 1 --q_queries 15 --episodes 2000 --aq --attack_iters 10
 5-way 5-shot (Standard few-shot baseline)
 
 python train.py --n_way 5 --k_shot 5 --q_queries 15 --episodes 2000 --aq --attack_iters 10
@@ -102,11 +104,12 @@ python train.py --n_way 5 --k_shot 5 --q_queries 15 --episodes 2000 --aq --attac
 
 python train.py --n_way 10 --k_shot 5 --q_queries 15 --episodes 2000 --aq --attack_iters 10
 Certified Defense Evaluation
+```
+
+```
 Evaluate robustness and trimming-based certified defense:
-
-
 python defense_certified.py --n_way 10 --k_shot 5 --episodes 300 --k_trim 3
-
+```
 ### Example output:
 
 === Certified Defense Evaluation ===
