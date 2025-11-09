@@ -139,17 +139,19 @@ Fig. 3	Trade-off between natural and trimmed robustness
 If you use this repository in your research, please cite:
 
 @article{mudgal2025fewshotrobust,
-  title={The Fragility of Generalization: A Systematic Analysis of Adversarial Attacks and Defenses in Low-Data Learning Regimes},
-  author={Mudgal, Janmejai and Gupta, Nirmit},
-  year={2025},
-  institution={Manipal University Jaipur},
-  note={Preprint}
+  title     = {The Fragility of Generalization: A Systematic Analysis of Adversarial Attacks and Defenses in Low-Data Learning Regimes},
+  author    = {Mudgal, Janmejai and Gupta, Nirmit},
+  year      = {2025},
+  journal   = {Preprint},
+  institution = {Manipal University Jaipur, Department of Computer Science and Engineering},
+  note      = {Available at: https://github.com/jj-mudgal/fewshot-robust}
 }
+
 License
 This repository is licensed under the MIT License.
 See the LICENSE file for details.
 
 Contact
 For correspondence or research collaboration, contact:
-Janmejai Mudgal — Department of CSE, Manipal University Jaipur (janmejai345@gmail.com)
-Nirmit Gupta — Department of CSE, Manipal University Jaipur (nirmitgupta777@gmail.com)
+- Janmejai Mudgal — Department of CSE, Manipal University Jaipur (janmejai345@gmail.com)
+- Nirmit Gupta — Department of CSE, Manipal University Jaipur (nirmitgupta777@gmail.com)
