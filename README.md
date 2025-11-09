@@ -32,22 +32,28 @@ This project provides a systematic analysis of such vulnerabilities under both q
 
 ## Repository Structure
 
-fewshot-robust/
-│
-├── attacks.py # PGD, FGSM, and support-set poisoning attacks
-├── defenses.py # Certified trimming and anomaly detection
-├── models.py # ConvNet backbone and ProtoNet implementation
-├── data.py # Episodic Mini-ImageNet dataset loader
-├── train.py # Prototypical Network training script
-├── defense_certified.py # Certified defense evaluation pipeline
-├── eval.py # Full evaluation script (natural, robust, poisoned)
-├── utils.py # Helper utilities (seeding, tracking, etc.)
-├── results/
-│ └── plots.py # Plot generation for evaluation figures
-├── scripts/
-│ └── inspect_dataset.py # Dataset manifest and inspection tool
-└── outputs/ # Generated figures and metrics
+## Repository Structure
 
+fewshot-robust/..
+- attacks.py  
+- defenses.py  
+- models.py  
+- data.py  
+- train.py  
+- defense_certified.py  
+- eval.py  
+- utils.py  
+
+results/..  
+- plots.py  
+
+scripts/  
+- inspect_dataset.py  
+
+outputs/..  
+- fig1_accuracy_comparison.png  
+- fig2_trimmed_delta.png  
+- fig3_tradeoff.png  
 
 ---
 
@@ -67,20 +73,24 @@ Dataset Setup
 The experiments use the Mini-ImageNet dataset, available on Kaggle:
 Mini-ImageNet Dataset (by Arjun Ashok)
 
-Expected directory structure:
 
-Copy code
-fewshot-robust/
-└── datasets/
-    └── mini-imagenet/
-        ├── train/
-        ├── val/
-        └── test/
-        
 ## Verify dataset integrity:
 
+Before training, ensure the Mini-ImageNet dataset is properly organized.
+Run the following command to generate a manifest and confirm dataset structure:
 python scripts/inspect_dataset.py
-Training the Model
+
+This will create a file named dataset_manifest.json in the project root.
+It lists the number of classes and images in each split (train, val, test).
+Example:
+{
+"train": {"num_classes": 64},
+"val": {"num_classes": 16},
+"test": {"num_classes": 20}
+}
+
+## Training the Model
+
 5-way 1-shot (Fast, highlights fragility)
 
 python train.py --n_way 5 --k_shot 1 --q_queries 15 --episodes 2000 --aq --attack_iters 10
@@ -109,10 +119,11 @@ python plots.py
 This will generate:
 
 
-outputs/
-├── fig1_accuracy_comparison.png
-├── fig2_trimmed_delta.png
-└── fig3_tradeoff.png
+outputs/..
+- fig1_accuracy_comparison.png
+- fig2_trimmed_delta.png
+- fig3_tradeoff.png
+
 Figure	Description
 Fig. 1	Accuracy comparison across few-shot configurations
 Fig. 2	Effect of trimming on accuracy (Δ Accuracy)
