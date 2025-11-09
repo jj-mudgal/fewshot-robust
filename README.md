@@ -32,8 +32,6 @@ This project provides a systematic analysis of such vulnerabilities under both q
 
 ## Repository Structure
 
-## Repository Structure
-
 fewshot-robust/..
 - attacks.py  
 - defenses.py  
